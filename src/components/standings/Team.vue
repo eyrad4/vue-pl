@@ -1,0 +1,50 @@
+<template>
+  <tr @click="teamWasSelected" :class="{'is-selected': teamSelected === team.position}">
+    <th>{{ team.position }}</th>
+    <td>
+      <a href="">
+        <span class="team-logo"><img :src="team.team.crestUrl" alt="" /></span>
+        {{ team.team.name }}
+        </a>
+    </td>
+    <td>{{ team.playedGames }}</td>
+    <td>{{ team.won }}</td>
+    <td>{{ team.draw }}</td>
+    <td>{{ team.lost }}</td>
+    <td>{{ team.goalsFor }}</td>
+    <td>{{ team.goalsAgainst }}</td>
+    <td>{{ team.goalDifference }}</td>
+    <td>{{ team.points }}</td>
+    <td></td>
+  </tr>
+</template>
+
+<script>
+export default {
+  props: {
+    team: {
+      required: true,
+      type: Object
+    }
+  },
+  computed: {
+     teamSelected() {
+       return this.$store.state.teamSelected
+     }
+  },
+  methods: {
+    teamWasSelected() {
+      //this.$emit('teamWasSelected', this.team.position)
+      this.$store.dispatch('teamSelected', this.team.position)
+    }
+  }
+}
+</script>
+
+<style scoped>
+  .team-logo img{
+    padding-right: 5px;
+    height: 20px;
+  }
+</style>
+

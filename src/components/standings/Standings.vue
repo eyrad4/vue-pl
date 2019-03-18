@@ -32,43 +32,27 @@
           </tr>
         </tfoot>
         <tbody>
-          <tr 
-            v-for="(team, index) in teams" :key="team.team.id"
-            @click="selectedTeam(index)"
-          >
-            <th>{{ team.position }}</th>
-            <td>
-              <a href="">
-                <span class="team-logo"><img :src="team.team.crestUrl" alt="" /></span>
-                {{ team.team.name }}
-                </a>
-            </td>
-            <td>{{ team.playedGames }}</td>
-            <td>{{ team.won }}</td>
-            <td>{{ team.draw }}</td>
-            <td>{{ team.lost }}</td>
-            <td>{{ team.goalsFor }}</td>
-            <td>{{ team.goalsAgainst }}</td>
-            <td>{{ team.goalDifference }}</td>
-            <td>{{ team.points }}</td>
-            <td></td>
-          </tr>
+          <team
+            v-for="team in teams" 
+            :key="team.team.id"
+            :team="team"
+          ></team>
         </tbody>
       </table>
   </div>
 </template>
 
 <script>
+import Team from './Team'
 export default {
+  components: {
+    'team': Team
+  },
  props: {
    teams: {
      type: Array
    }
- },
- data() {
-   return {     
-   }
- },
+ }, 
  methods: {
   selectedTeam(event) {
     console.log(this)
@@ -76,11 +60,5 @@ export default {
  }
 }
 </script>
-<style scoped>
-  .team-logo img{
-    padding-right: 5px;
-    height: 20px;
-  }
-</style>
 
 
