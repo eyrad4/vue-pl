@@ -1,19 +1,38 @@
 <template>
   <section class="section">
     <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
+      <div class="columns">
+        <div class="column is-9">
+          <app-standings :teams="standings"></app-standings>
+        </div>
+        <div class="column is-3"></div>
+      </div>
+      
     </div>
   </section>
 </template>
 
 <script>
+import { HTTP } from '../common/api.service'
+import { mapState } from "vuex";
+import Standings from '../components/standings/Standings';
 export default {
-  
+  components: {
+    'app-standings': Standings
+  },
+  data() {
+    return {
+      
+    }       
+  },
+  created() {
+    //this.$store.dispatch('getStandings')
+  },
+  computed: {
+    ...mapState({
+      standings: 'standings'
+    })
+  }
 }
 </script>
 
