@@ -1,5 +1,5 @@
 <template>
-  <tr @click="teamWasSelected" :class="{'is-selected': teamSelected === team.position}">
+  <tr @click="teamWasSelected" :class="{'is-selected': teamSelected === team.team.id}">
     <th>{{ team.position }}</th>
     <td>
       <a href="">
@@ -34,8 +34,7 @@ export default {
   },
   methods: {
     teamWasSelected() {
-      //this.$emit('teamWasSelected', this.team.position)
-      this.$store.dispatch('teamSelected', this.team.position)
+      this.$store.dispatch('teamSelected', this.team.team.id)
     }
   }
 }
