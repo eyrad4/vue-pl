@@ -29,7 +29,7 @@ export default {
   },
   computed: {
      teamSelected() {
-       return this.$store.state.teamSelected
+       return (this.$store.state.teamSelected !== null) ? this.$store.state.teamSelected.id : '' 
      }
   },
   methods: {
