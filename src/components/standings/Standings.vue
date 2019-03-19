@@ -1,6 +1,7 @@
 <template>
   <div>
-    <table class="table">
+    <app-loading v-if="!teams"></app-loading>
+    <table class="table" v-if="teams">
         <thead>
           <tr>
             <th><abbr title="Position">Pos</abbr></th>

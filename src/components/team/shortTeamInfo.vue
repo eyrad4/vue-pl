@@ -1,4 +1,6 @@
 <template>
+<div>
+  <app-loading v-if="!team && team !== null"></app-loading>
   <div class="team-short-info" v-if="team">
     <figure class="image">
       <img :src="team.crestUrl">
@@ -23,6 +25,7 @@
     </table>
     <a class="button is-primary">Detail info</a>
   </div>
+</div>
 </template>
 
 <script>
