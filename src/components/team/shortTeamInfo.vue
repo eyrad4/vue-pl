@@ -44,7 +44,6 @@ export default {
       return this.team.squad.filter((person) => {
         return person.role == 'COACH'
       }).map((coach) => {
-        console.log(coach, coach.name)
         return coach.name
       }).shift();
     }
