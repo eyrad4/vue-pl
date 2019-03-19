@@ -6,8 +6,10 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    standings: [ { "position": 1, "team": { "id": 64, "name": "Liverpool FC", "crestUrl": "http://upload.wikimedia.org/wikipedia/de/0/0a/FC_Liverpool.svg" }, "playedGames": 31, "won": 23, "draw": 7, "lost": 1, "points": 76, "goalsFor": 70, "goalsAgainst": 18, "goalDifference": 52 }, { "position": 2, "team": { "id": 65, "name": "Manchester City FC", "crestUrl": "https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg" }, "playedGames": 30, "won": 24, "draw": 2, "lost": 4, "points": 74, "goalsFor": 79, "goalsAgainst": 21, "goalDifference": 58 }, { "position": 3, "team": { "id": 73, "name": "Tottenham Hotspur FC", "crestUrl": "http://upload.wikimedia.org/wikipedia/de/b/b4/Tottenham_Hotspur.svg" }, "playedGames": 30, "won": 20, "draw": 1, "lost": 9, "points": 61, "goalsFor": 57, "goalsAgainst": 32, "goalDifference": 25 }, { "position": 4, "team": { "id": 57, "name": "Arsenal FC", "crestUrl": "http://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg" }, "playedGames": 30, "won": 18, "draw": 6, "lost": 6, "points": 60, "goalsFor": 63, "goalsAgainst": 39, "goalDifference": 24 }, { "position": 5, "team": { "id": 66, "name": "Manchester United FC", "crestUrl": "http://upload.wikimedia.org/wikipedia/de/d/da/Manchester_United_FC.svg" }, "playedGames": 30, "won": 17, "draw": 7, "lost": 6, "points": 58, "goalsFor": 58, "goalsAgainst": 40, "goalDifference": 18 }, { "position": 6, "team": { "id": 61, "name": "Chelsea FC", "crestUrl": "http://upload.wikimedia.org/wikipedia/de/5/5c/Chelsea_crest.svg" }, "playedGames": 30, "won": 17, "draw": 6, "lost": 7, "points": 57, "goalsFor": 50, "goalsAgainst": 33, "goalDifference": 17 }, { "position": 7, "team": { "id": 76, "name": "Wolverhampton Wanderers FC", "crestUrl": "https://upload.wikimedia.org/wikipedia/en/f/fc/Wolverhampton_Wanderers.svg" }, "playedGames": 30, "won": 12, "draw": 8, "lost": 10, "points": 44, "goalsFor": 38, "goalsAgainst": 36, "goalDifference": 2 }, { "position": 8, "team": { "id": 346, "name": "Watford FC", "crestUrl": "https://upload.wikimedia.org/wikipedia/en/e/e2/Watford.svg" }, "playedGames": 30, "won": 12, "draw": 7, "lost": 11, "points": 43, "goalsFor": 42, "goalsAgainst": 44, "goalDifference": -2 }, { "position": 9, "team": { "id": 563, "name": "West Ham United FC", "crestUrl": "http://upload.wikimedia.org/wikipedia/de/e/e0/West_Ham_United_FC.svg" }, "playedGames": 31, "won": 12, "draw": 6, "lost": 13, "points": 42, "goalsFor": 41, "goalsAgainst": 46, "goalDifference": -5 }, { "position": 10, "team": { "id": 338, "name": "Leicester City FC", "crestUrl": "http://upload.wikimedia.org/wikipedia/en/6/63/Leicester02.png" }, "playedGames": 31, "won": 12, "draw": 5, "lost": 14, "points": 41, "goalsFor": 40, "goalsAgainst": 43, "goalDifference": -3 }, { "position": 11, "team": { "id": 62, "name": "Everton FC", "crestUrl": "http://upload.wikimedia.org/wikipedia/de/f/f9/Everton_FC.svg" }, "playedGames": 31, "won": 11, "draw": 7, "lost": 13, "points": 40, "goalsFor": 43, "goalsAgainst": 42, "goalDifference": 1 }, { "position": 12, "team": { "id": 1044, "name": "AFC Bournemouth", "crestUrl": "https://upload.wikimedia.org/wikipedia/de/4/41/Afc_bournemouth.svg" }, "playedGames": 31, "won": 11, "draw": 5, "lost": 15, "points": 38, "goalsFor": 43, "goalsAgainst": 56, "goalDifference": -13 }, { "position": 13, "team": { "id": 67, "name": "Newcastle United FC", "crestUrl": "http://upload.wikimedia.org/wikipedia/de/5/56/Newcastle_United_Logo.svg" }, "playedGames": 31, "won": 9, "draw": 8, "lost": 14, "points": 35, "goalsFor": 31, "goalsAgainst": 40, "goalDifference": -9 }, { "position": 14, "team": { "id": 354, "name": "Crystal Palace FC", "crestUrl": "http://upload.wikimedia.org/wikipedia/de/b/bf/Crystal_Palace_F.C._logo_%282013%29.png" }, "playedGames": 30, "won": 9, "draw": 6, "lost": 15, "points": 33, "goalsFor": 36, "goalsAgainst": 41, "goalDifference": -5 }, { "position": 15, "team": { "id": 397, "name": "Brighton & Hove Albion FC", "crestUrl": "https://upload.wikimedia.org/wikipedia/en/f/fd/Brighton_%26_Hove_Albion_logo.svg" }, "playedGames": 29, "won": 9, "draw": 6, "lost": 14, "points": 33, "goalsFor": 32, "goalsAgainst": 42, "goalDifference": -10 }, { "position": 16, "team": { "id": 340, "name": "Southampton FC", "crestUrl": "http://upload.wikimedia.org/wikipedia/de/c/c9/FC_Southampton.svg" }, "playedGames": 30, "won": 7, "draw": 9, "lost": 14, "points": 30, "goalsFor": 34, "goalsAgainst": 50, "goalDifference": -16 }, { "position": 17, "team": { "id": 328, "name": "Burnley FC", "crestUrl": "https://upload.wikimedia.org/wikipedia/en/0/02/Burnley_FC_badge.png" }, "playedGames": 31, "won": 8, "draw": 6, "lost": 17, "points": 30, "goalsFor": 35, "goalsAgainst": 59, "goalDifference": -24 }, { "position": 18, "team": { "id": 715, "name": "Cardiff City FC", "crestUrl": "https://upload.wikimedia.org/wikipedia/en/3/3c/Cardiff_City_crest.svg" }, "playedGames": 30, "won": 8, "draw": 4, "lost": 18, "points": 28, "goalsFor": 27, "goalsAgainst": 57, "goalDifference": -30 }, { "position": 19, "team": { "id": 63, "name": "Fulham FC", "crestUrl": "http://upload.wikimedia.org/wikipedia/de/a/a8/Fulham_fc.svg" }, "playedGames": 31, "won": 4, "draw": 5, "lost": 22, "points": 17, "goalsFor": 29, "goalsAgainst": 70, "goalDifference": -41 }, { "position": 20, "team": { "id": 394, "name": "Huddersfield Town AFC", "crestUrl": "https://upload.wikimedia.org/wikipedia/en/5/5a/Huddersfield_Town_A.F.C._logo.svg" }, "playedGames": 31, "won": 3, "draw": 5, "lost": 23, "points": 14, "goalsFor": 18, "goalsAgainst": 57, "goalDifference": -39 } ],
-    teamSelected: null
+    standings: null,
+    teamSelected: null,
+    allMatches: null,
+    liveMatches: null
   },
   mutations: {
     setStandings(state, payload) {
@@ -15,18 +17,59 @@ export default new Vuex.Store({
     },
     setTeamSelected(state, payload) {
       state.teamSelected = payload
+    },
+    setAllMatches(state, payload) {
+      state.allMatches = payload
+    },
+    setLiveMatches(state, payload) {
+      state.liveMatches = payload
     }
   },
   actions: {
     getStandings({ commit }) {
-      HTTP.get('competitions/PL/standings').then((response) => {
-        commit('setStandings', response.data.standings[0].table)
-      })
+      return new Promise((resolve, reject) => {
+        HTTP.get('competitions/PL/standings').then((response) => {
+          commit('setStandings', response.data.standings[0].table)
+          resolve(response)
+        }).catch((error) => {
+          reject(error)
+        })
+      })  
     },
     teamSelected({ commit }, payload) {
-      HTTP.get('teams/' + payload).then((response) => {
-        commit('setTeamSelected', response.data);
+      return new Promise((resolve, reject) => {
+        HTTP.get('teams/' + payload).then((response) => {
+          commit('setTeamSelected', response.data)
+          resolve(response)
+        }).catch((error) => {
+          reject(error)
+        })
       })
+    },
+    allMatches({ commit }) {
+      return new Promise((resolve, reject) => {
+        HTTP.get('competitions/PL/matches').then((response) => {
+          commit('setAllMatches', response.data)
+          resolve(response)
+        }).catch((error) => {
+          reject(error)
+        })
+      })
+    },
+    liveMatches({ commit }) {
+      return new Promise((resolve, reject) => {
+        HTTP.get('matches?status=LIVE').then((response) => {
+            commit('setLiveMatches', response.data)
+            resolve(response)
+        }).catch((error) => {
+          reject(error)
+        })
+      })
+    }
+  },
+  getters: {
+    getStandings: state => {
+      return state.standings;
     }
   }
 })
