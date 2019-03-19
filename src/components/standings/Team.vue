@@ -2,11 +2,10 @@
   <tr @click="teamWasSelected" :class="{'is-selected': teamSelected === team.team.id}">
     <th>{{ team.position }}</th>
     <td>
-      <router-link :to="{ name: 'detailTeam', params: { id: team.team.id } }"></router-link>
-      <a href="">
+      <router-link :to="{ name: 'detailTeam', params: { id: team.team.id } }">
         <span class="team-logo"><img :src="team.team.crestUrl" alt="" /></span>
         {{ team.team.name }}
-        </a>
+      </router-link>
     </td>
     <td>{{ team.playedGames }}</td>
     <td>{{ team.won }}</td>
