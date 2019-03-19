@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="title is-2 has-text-centered">Match day {{ day }}</div>   
+  <div class="matches-of-day">
+    <div class="title is-3 has-text-centered">Match day {{ day }}</div>   
     <slot></slot>
   </div>
 </template>
@@ -14,4 +14,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .matches-of-day{
+    margin-bottom: 1rem;
+  }
+</style>
+
 
