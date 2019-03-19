@@ -23,7 +23,7 @@
         <td>{{ coach }}</td>
       </tr>
     </table>
-    <a class="button is-primary">Detail info</a>
+    <router-link class="button is-primary" :to="{ name: 'detailTeam', params: { id: team.id } }">Detail info</router-link>
   </div>
 </div>
 </template>

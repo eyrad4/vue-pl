@@ -2,6 +2,7 @@
   <tr @click="teamWasSelected" :class="{'is-selected': teamSelected === team.team.id}">
     <th>{{ team.position }}</th>
     <td>
+      <router-link :to="{ name: 'detailTeam', params: { id: team.team.id } }"></router-link>
       <a href="">
         <span class="team-logo"><img :src="team.team.crestUrl" alt="" /></span>
         {{ team.team.name }}
@@ -34,7 +35,7 @@ export default {
   },
   methods: {
     teamWasSelected() {
-      this.$store.dispatch('teamSelected', this.team.team.id)
+      //this.$store.dispatch('teamSelected', this.team.team.id)
     }
   }
 }
