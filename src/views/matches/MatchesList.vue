@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <app-tabs>
+    <app-loading v-if="!allMatches"></app-loading>
+    <app-tabs v-if="allMatches">
       <app-tab name="Next tours" :selected="true">
          <app-match-day 
           v-for="day in nextMatchesDays"
@@ -59,6 +60,11 @@ export default {
               )].sort();
     }
   },
+  created() {
+    if (!this.allMatches) {
+      this.$store.dispatch('allMatches')
+    }
+  },
   methods: {
     matchesInCurrentDay(day) {
       return this.allMatches.matches.filter((match) => match.matchday === day)
@@ -69,7 +75,3 @@ export default {
   }
 }
 </script>
-
-
-
-
