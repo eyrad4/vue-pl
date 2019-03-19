@@ -25,7 +25,9 @@
         </div>
       </div>
     </nav>
-    <router-view></router-view>
+    <section class="section">
+      <router-view></router-view>
+    </section>
     <footer class="footer">
       <div class="content has-text-centered">
         <p>

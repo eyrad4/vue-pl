@@ -1,21 +1,18 @@
 <template>
-  <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-9">
-          <app-standings 
-            :teams="standings"
-          ></app-standings>
-        </div>
-        <div class="column is-3">
-          <app-short-team-info
-            :team="teamSelected"
-          ></app-short-team-info>
-        </div>
+  <div class="container">
+    <div class="columns">
+      <div class="column is-9">
+        <app-standings 
+          :teams="standings"
+        ></app-standings>
       </div>
-      
+      <div class="column is-3">
+        <app-short-team-info
+          :team="teamSelected"
+        ></app-short-team-info>
+      </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>

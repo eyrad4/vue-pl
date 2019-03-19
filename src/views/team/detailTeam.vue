@@ -1,4 +1,5 @@
 <template>
+<div class="container">
   <div class="tabs is-medium">
     <ul>
       <li class="is-active"><a>Pictures</a></li>
@@ -7,6 +8,7 @@
       <li><a>Documents</a></li>
     </ul>
   </div>
+</div>
 </template>
 
 <script>
