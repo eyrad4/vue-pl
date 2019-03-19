@@ -1,0 +1,47 @@
+<template>
+  <div class="team-short-info" v-if="team">
+    <figure class="image">
+      <img :src="team.crestUrl">
+    </figure>
+    <table class="table is-fullwidth">
+      <tr>
+        <td>Name</td>
+        <td>{{ team.shortName }}</td>
+      </tr>
+      <tr>
+        <td>Founded</td>
+        <td>{{ team.founded }}</td>
+      </tr>
+      <tr>
+        <td>Stadium</td>
+        <td>{{ team.venue }}</td>
+      </tr>
+      <tr>
+        <td>Coach</td>
+        <td>{{ coach }}</td>
+      </tr>
+    </table>
+    <a class="button is-primary">Detail info</a>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    team: {
+      type: Object
+    }
+  },
+  computed: {
+    coach() {
+      return this.team.squad.filter((person) => {
+        return person.role == 'COACH'
+      }).map((coach) => {
+        console.log(coach, coach.name)
+        return coach.name
+      }).shift();
+    }
+  }
+}
+</script>
+

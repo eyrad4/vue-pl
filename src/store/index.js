@@ -24,7 +24,9 @@ export default new Vuex.Store({
       })
     },
     teamSelected({ commit }, payload) {
-      commit('setTeamSelected', payload);
+      HTTP.get('teams/' + payload).then((response) => {
+        commit('setTeamSelected', response.data);
+      })
     }
   }
 })
