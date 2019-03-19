@@ -25,7 +25,7 @@
     </table>
     <router-link 
       class="button is-primary" 
-      :to="{ name: 'detailTeam', params: { id: team.id } }"
+      :to="{ name: 'DetailTeam', params: { id: team.id } }"
       v-if="!$route.params.id"
     >Detail info</router-link>
   </div>

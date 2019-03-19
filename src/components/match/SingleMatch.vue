@@ -1,24 +1,23 @@
 <template>
   <div class="columns">
-      <div class="column has-text-right">
-        <span class="team-name title is-5">{{ match.homeTeam.name }}</span>
+    <div class="column has-text-right">
+      <span class="team-name title is-5">{{ match.homeTeam.name }}</span>
+    </div>
+      <div class="column is-2 has-text-centered">
+        <span 
+          :class="checkWinner(match.score.winner, 'home')"
+          class="score title is-5"
+        >{{ homeTeamScore}}</span>
+        <span 
+          :class="checkWinner(match.score.winner, 'away')"
+          class="score title is-5"
+        >{{ awayTeamScore }}</span>
+        <div class="match-date subtitle is-6">{{ dateFormat(match.utcDate) }}</div>
       </div>
-        <div class="column is-2 has-text-centered">
-          <span 
-            :class="checkWinner(match.score.winner, 'home')"
-            class="score title is-5"
-          >{{ homeTeamScore}}</span>
-          <span 
-            :class="checkWinner(match.score.winner, 'away')"
-            class="score title is-5"
-          >{{ awayTeamScore }}</span>
-          <div class="match-date subtitle is-6">{{ dateFormat(match.utcDate) }}</div>
-        </div>
       <div class="column has-text-left">
         <span class="team-name title is-5">{{ match.awayTeam.name }}</span>
-        
       </div>
-    </div>
+  </div>
 </template>
 
 <script>
