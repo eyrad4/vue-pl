@@ -16,9 +16,7 @@
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
           <router-link class="navbar-item" :to="{name: 'Home'}">Standings</router-link>
-          <a class="navbar-item">
-            Future matches
-          </a>
+          <router-link class="navbar-item" :to="{name: 'matchesList'}">Future matches</router-link>
           <a class="navbar-item">
             About as
           </a>
