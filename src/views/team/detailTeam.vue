@@ -1,19 +1,30 @@
 <template>
-<div class="container">
-  <div class="tabs is-medium">
-    <ul>
-      <li class="is-active"><a>Pictures</a></li>
-      <li><a>Music</a></li>
-      <li><a>Videos</a></li>
-      <li><a>Documents</a></li>
-    </ul>
+  <div class="container">
+    <app-tabs>
+      <app-tab name="Info" :selected="true">
+        Info
+      </app-tab>  
+      <app-tab name="Matches">
+        Matches
+      </app-tab>
+      <app-tab name="Players">
+        Players
+      </app-tab>
+      <app-tab name="Coach team">
+        Coach team
+      </app-tab>
+    </app-tabs>
   </div>
-</div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
-  
+  computed: {
+    ...mapState({
+      teamSelected: 'teamSelected'
+    })
+  }
 }
 </script>
 
