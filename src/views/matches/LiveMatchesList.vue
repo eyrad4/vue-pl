@@ -1,12 +1,13 @@
 <template>
   <div class="container">
-    <app-loading v-if="!allMatches"></app-loading>
-    <app-match
-       v-if="liveMatches"
-      v-for="match in liveMatches.matches"
-      :match="match"
-      :key="match.id"
-    ></app-match>
+    <app-loading v-if="!liveMatches || liveMatches.matches.length === 0"></app-loading>
+    <template v-if="liveMatches && liveMatches.matches.length > 0">
+      <app-match
+        v-for="match in liveMatches.matches"
+        :match="match"
+        :key="match.id"
+      ></app-match>
+    </template>
   </div>
 </template>
 
@@ -29,6 +30,9 @@ export default {
     }
   },
   created() {
+    this.$nextTick(() => {
+      this.$store.dispatch('liveMatches')
+    })
     this.getLiveMatches(); 
   },
   beforeDestroy() {
