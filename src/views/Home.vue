@@ -16,7 +16,6 @@
 </template>
 
 <script>
-//import { HTTP } from '../common/api.service'
 import { mapState } from "vuex";
 import Standings from '../components/standings/Standings';
 import ShortTeamInfo from '../components/team/shortTeamInfo';
@@ -31,7 +30,9 @@ export default {
     }       
   },
   created() {
-    //this.$store.dispatch('getStandings')
+    if (!this.standings) {
+      this.$store.dispatch('getStandings')
+    }
   },
   computed: {
     ...mapState({
