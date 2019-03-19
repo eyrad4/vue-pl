@@ -15,6 +15,7 @@
     <td>{{ team.goalsAgainst }}</td>
     <td>{{ team.goalDifference }}</td>
     <td>{{ team.points }}</td>
+    <td><small>{{ seasonResultInfo(team.position) }}</small></td>
     <td></td>
   </tr>
 </template>
@@ -35,6 +36,19 @@ export default {
   methods: {
     teamWasSelected() {
       this.$store.dispatch('teamSelected', this.team.team.id)
+    },
+    seasonResultInfo(position) {
+      if (position >= 1 && position <= 3) {
+        return 'Qualification for the Champions League group stage'
+      } else if (position == 4) {
+        return 'Qualification for the Champions League play-off round'
+      } else if (position >= 5 && position <= 6) {
+        return 'Qualification for the Europa League group stage'
+      } else if (position == 7) {
+        return 'Qualification for the Europa League third qualifying round'
+      } else if (position == 18 || position == 19 || position == 20) {
+        return 'Relegation to the Football League Championship'
+      }
     }
   }
 }
@@ -44,6 +58,9 @@ export default {
   .team-logo img{
     padding-right: 5px;
     height: 20px;
+  }
+  small{
+    font-size: 0.7em
   }
 </style>
 
