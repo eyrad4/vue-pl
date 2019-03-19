@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Home'
 import detailTeam from '@/views/team/detailTeam'
+import matchesList from '@/views/matches/MatchesList'
 
 Vue.use(Router)
 
@@ -16,6 +17,11 @@ export default new Router({
       path: '/team/:id',
       name: 'detailTeam',
       component: detailTeam
+    },
+    {
+      path: '/matches',
+      name: 'matchesList',
+      component: matchesList
     }
   ]
 })
