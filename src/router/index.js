@@ -13,7 +13,7 @@ export default new Router({
       component: Home
     },
     {
-      path: '/team:id',
+      path: '/team/:id',
       name: 'detailTeam',
       component: detailTeam
     }
