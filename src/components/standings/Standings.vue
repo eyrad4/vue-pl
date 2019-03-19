@@ -52,11 +52,6 @@ export default {
    teams: {
      type: Array
    }
- }, 
- methods: {
-  selectedTeam(event) {
-    console.log(this)
-  }
  }
 }
 </script>
