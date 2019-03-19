@@ -16,7 +16,7 @@
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
           <a class="navbar-item">
-            Table
+            Standings
           </a>
           <a class="navbar-item">
             Future matches
