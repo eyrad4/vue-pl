@@ -23,7 +23,11 @@
         <td>{{ coach }}</td>
       </tr>
     </table>
-    <router-link class="button is-primary" :to="{ name: 'detailTeam', params: { id: team.id } }">Detail info</router-link>
+    <router-link 
+      class="button is-primary" 
+      :to="{ name: 'detailTeam', params: { id: team.id } }"
+      v-if="!$route.params.id"
+    >Detail info</router-link>
   </div>
 </div>
 </template>
